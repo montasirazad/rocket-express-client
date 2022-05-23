@@ -3,13 +3,14 @@ import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './MenuItem.css';
 import RocketLaunchSharpIcon from '@mui/icons-material/RocketLaunchSharp';
-
+import ShareLocationIcon from '@mui/icons-material/ShareLocation';
+import LoginIcon from '@mui/icons-material/Login';
 
 
 const MenuItem = () => {
     return (
         <div className='nav-div'>
-            <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark" fixed="top" >
+            <Navbar collapseOnSelect expand="lg" bg="success" variant="dark" fixed="top" >
                 <Container>
                     < RocketLaunchSharpIcon />
                     <Link to='/'><h3>Rocket Express</h3></Link>
@@ -22,9 +23,9 @@ const MenuItem = () => {
                         </Nav>
                         <Nav>
                             <Link to='/services'>Services</Link>
-                            <Link to='/services'>Track Your Order</Link>
-                            <Link to='/login'>Log In</Link>
-                            
+                            <Link to='/track-order'><ShareLocationIcon /> Track Your Parcel</Link>
+                            <Link to='/login'> < LoginIcon /> Log In</Link>
+
 
                         </Nav>
                     </Navbar.Collapse>
