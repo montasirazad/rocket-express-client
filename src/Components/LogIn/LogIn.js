@@ -1,11 +1,14 @@
 import React from 'react';
 import useAuth from '../Hooks/Hook/useAuth';
+import GoogleIcon from '@mui/icons-material/Google';
+import { Button } from '@mui/material';
 
 const LogIn = () => {
-    const { handleGoogleSignIn,handleGoogleSignOut } = useAuth();
+    const { handleGoogleSignIn, handleGoogleSignOut } = useAuth();
     return (
         <div>
-            <button onClick={handleGoogleSignIn}>log in</button>
+             <Button onClick={handleGoogleSignIn} variant="contained" disableElevation><GoogleIcon />Please Continue using g-mail</Button>
+            
             <button onClick={handleGoogleSignOut}>log Out</button>
         </div>
     );
