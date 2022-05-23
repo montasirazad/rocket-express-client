@@ -1,13 +1,17 @@
 import './App.css';
-import useFirebase from './Components/Hooks/Firebase/useFirebase';
+import AuthProvider from './Components/Context/AuthProvider';
+import LogIn from './Components/LogIn/LogIn';
 
 function App() {
-  const { signedInUser, handleGoogleSignIn } = useFirebase()
+
+
   return (
-    <div className="App">
-      <h1>Rocket Express</h1>
-      <button onClick={handleGoogleSignIn}>LOg in</button>
-    </div>
+    <AuthProvider>
+      <div className="App">
+        <h1>Rocket Express</h1>
+        <LogIn />
+      </div>
+    </AuthProvider>
   );
 }
 

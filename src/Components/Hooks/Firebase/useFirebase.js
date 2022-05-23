@@ -37,6 +37,7 @@ const useFirebase = () => {
         const auth = getAuth();
         signOut(auth).then(() => {
             setSignedInUser({})
+            console.log(signedInUser);
         }).catch((error) => {
             // An error happened.
         });
