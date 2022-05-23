@@ -1,23 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
+import useFirebase from './Components/Hooks/Firebase/useFirebase';
 
 function App() {
+  const { signedInUser, handleGoogleSignIn } = useFirebase()
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Rocket Express</h1>
+      <button onClick={handleGoogleSignIn}>LOg in</button>
     </div>
   );
 }
