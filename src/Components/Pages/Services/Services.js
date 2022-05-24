@@ -11,6 +11,7 @@ import walkIn from '../../../image/walk-in.png';
 import dhaka from '../../../image/dhaka.jpg';
 import MenuItem from '../../Shared/MenuItem/MenuItem';
 import './Services.css';
+import { Link } from 'react-router-dom';
 
 
 const Services = () => {
@@ -66,7 +67,7 @@ const Services = () => {
                     </CardContent>
                     <CardActions>
 
-                        <Button size="small">Confirm An Order</Button>
+                    <Link to='/place-order-form'><Button size="small">Confirm An Order</Button></Link>
                     </CardActions>
                 </Card>
 
@@ -90,7 +91,7 @@ const Services = () => {
                     </CardContent>
                     <CardActions>
 
-                        <Button size="small">Confirm An Order</Button>
+                        <Link to='/place-order-form'><Button size="small">Confirm An Order</Button></Link>
                     </CardActions>
                 </Card>
 

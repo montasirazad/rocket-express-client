@@ -1,0 +1,24 @@
+.logIn-div {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to right top, #24272a, #005561, #00876e, #65b44c, #eecf0f);
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+}
+
+.g-icon {
+    margin-right: 5px;
+}
+
+.logIn-div p {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+     color: white;
+    text-align: center;
+}

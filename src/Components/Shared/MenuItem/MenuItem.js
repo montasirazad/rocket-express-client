@@ -22,6 +22,7 @@ const MenuItem = () => {
 
                         </Nav>
                         <Nav>
+                            <Link to='/'>Home</Link>
                             <Link to='/services'>Services</Link>
                             <Link to='/track-order'><ShareLocationIcon /> Track Your Parcel</Link>
                             <Link to='/login'> < LoginIcon /> Log In</Link>

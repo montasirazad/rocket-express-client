@@ -3,6 +3,7 @@ import './App.css';
 import AuthProvider from './Components/Context/AuthProvider';
 import LogIn from './Components/LogIn/LogIn';
 import HomePage from './Components/Pages/HomePage/HomePage';
+import PlaceOrderForm from './Components/Pages/PlaceOrderForm/PlaceOrderForm';
 import Services from './Components/Pages/Services/Services';
 import TrackOrder from './Components/Pages/TrackOrder/TrackOrder';
 
@@ -17,6 +18,7 @@ function App() {
         <Route path='/services' element={<Services />} />
         <Route path='/home' element={<HomePage />} />
         <Route path='/login' element={<LogIn />} />
+        <Route path='/place-order-form' element={<PlaceOrderForm />} />
         <Route path='/track-order' element={<TrackOrder />} />
       </Routes>
 

@@ -1,4 +1,4 @@
-.card-div{
+.card-div {
     display: flex;
     margin: 30px;
     align-items: center;
@@ -10,4 +10,8 @@
 
 .info-card {
     margin: 15px;
+}
+
+.info-card a {
+    text-decoration: none;
 }
