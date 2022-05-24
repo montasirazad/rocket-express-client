@@ -1,0 +1,13 @@
+.card-div{
+    display: flex;
+    margin: 30px;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+
+}
+
+.info-card {
+    margin: 15px;
+}

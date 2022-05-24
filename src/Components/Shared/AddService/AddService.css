@@ -1,0 +1,10 @@
+.add-order-div {
+    background-image: url('../../../image/dhaka-banner-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: 100vw 350px;
+    height: 350px;
+    padding: 10px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
