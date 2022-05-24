@@ -13,4 +13,4 @@ const HomePage = () => {
     );
 };
 
-export default HomePage; <h1>This is Home</h1>
+export default HomePage; 
