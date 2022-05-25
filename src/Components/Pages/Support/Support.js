@@ -1,7 +1,7 @@
 import { Grid, Typography } from '@mui/material';
 import React from 'react';
 import customerSupport from '../../../image/customer-support.jpg';
-
+import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 
 const Support = () => {
     return (
@@ -23,13 +23,13 @@ const Support = () => {
                     borderRadius: '5px',
                     backgroundColor: "black",
                     color: 'white',
-                    padding:'10px'
+                    padding: '10px'
                 }}
                     sx={{ md: 8, xs: 12 }} textAlign='left' >
 
 
 
-                    <h3>24/7 customer support</h3>
+                    <h3><SupportAgentIcon /> 24/7 customer support</h3>
                     <Typography variant="subtitle1" gutterBottom component="div">
                         Not every customer will tell you that they are walking away unhappy — in fact, few will.
                     </Typography>
