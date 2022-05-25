@@ -29,3 +29,7 @@
     text-align: center;
     margin-bottom: 20px;
 }
+
+.calender-div input {
+    /* width: 250px; */
+}

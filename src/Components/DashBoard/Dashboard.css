@@ -1,0 +1,25 @@
+.dashboard-div{
+display: grid;
+margin-top: 58px;
+grid-template-columns: .7fr 2fr;
+column-gap: 10px;
+}
+
+.dashboard-drawer{
+/* border: 2px solid green; */
+background-color: #198754;
+height: 100vh;
+padding: 10px;
+color: white;
+}
+
+.dashboard-data{
+border: 2px solid red;
+}
+
+.dashboard-drawer h4:hover {
+    background-color: rgb(14, 17, 19);
+    border-radius: 4px;
+    padding: 5px;
+    
+}

@@ -10,7 +10,7 @@ import LoginIcon from '@mui/icons-material/Login';
 const MenuItem = () => {
     return (
         <div className='nav-div'>
-            <Navbar collapseOnSelect expand="lg" bg="success" variant="dark" fixed="top" >
+            <Navbar   collapseOnSelect expand="lg" bg="success" variant="dark" fixed="top" >
                 <Container>
                     < RocketLaunchSharpIcon />
                     <Link to='/'><h3>Rocket Express</h3></Link>
@@ -24,8 +24,10 @@ const MenuItem = () => {
                         <Nav>
                             <Link to='/'>Home</Link>
                             <Link to='/services'>Services</Link>
+                            <Link to='/dashboard'>  Dashboard</Link>
                             <Link to='/track-order'><ShareLocationIcon /> Track Your Parcel</Link>
                             <Link to='/login'> < LoginIcon /> Log In</Link>
+                           
 
 
                         </Nav>
