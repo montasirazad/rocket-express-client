@@ -7,7 +7,8 @@ import MenuItem from '../Shared/MenuItem/MenuItem';
 
 const LogIn = () => {
     const { handleGoogleSignIn, handleGoogleSignOut } = useAuth();
-    return (<>
+    return (
+    <>
         <MenuItem />
         <div className='logIn-div'>
 
