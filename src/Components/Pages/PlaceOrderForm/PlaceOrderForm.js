@@ -48,6 +48,15 @@ const PlaceOrderForm = () => {
     }
 
     const handleSubmitClientInfo = (e) => {
+
+        fetch('http://localhost:5000/', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(orderInfo)
+        })
+
         console.log(orderInfo);
         e.preventDefault()
     }
