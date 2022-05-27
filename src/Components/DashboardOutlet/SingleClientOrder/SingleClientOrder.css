@@ -1,15 +1,22 @@
-.all-order{
+.main-order-container {
     display: grid;
     grid-template-columns: auto auto;
     justify-content: center;
-    /* display: flex;
-    flex-wrap: wrap;
-     
-    justify-content: space-around; */
+
+    /* flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-evenly; */
+}
+
+.orders-div {
+    border: 1px solid green;
+    margin: 10px;
+    padding: 10px;
+    width: 400px;
 }
 
 @media screen and (max-width: 916px) {
-    .all-order {
+    .main-order-container {
         display: grid;
         grid-template-columns: auto ;
         justify-content: center;

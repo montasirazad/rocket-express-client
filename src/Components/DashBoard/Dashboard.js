@@ -1,15 +1,18 @@
-import React from 'react';
-import MenuItem from '../Shared/MenuItem/MenuItem';
-import RateReviewIcon from '@mui/icons-material/RateReview';
 import DashboardIcon from '@mui/icons-material/Dashboard';
-import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
+import ProductionQuantityLimitsIcon from '@mui/icons-material/ProductionQuantityLimits';
+import RateReviewIcon from '@mui/icons-material/RateReview';
 import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
-import './Dashboard.css';
+import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
+import useAuth from '../Hooks/Hook/useAuth';
+import MenuItem from '../Shared/MenuItem/MenuItem';
+import './Dashboard.css';
 
 
 
 const Dashboard = () => {
+    const { signedInUser } = useAuth();
+
     return (
         <div className='main-container'>
             <MenuItem />
@@ -17,10 +20,10 @@ const Dashboard = () => {
 
                 <div className='dashboard-drawer'>
 
-                   <p>YOur order</p>
+                    <Link to={`/dashboard/Single/client/order/details/${signedInUser.email}`}> <p><ProductionQuantityLimitsIcon />Your order</p></Link>
 
                     <Link to='/dashboard/feedback'><p><RateReviewIcon /> Give feedback</p></Link>
-                     
+
                     <p><SupervisorAccountIcon /> Make Admin</p>
                     <Link to='/dashboard/all-order'> <p><DashboardIcon /> All Order</p></Link>
                 </div>

@@ -5,6 +5,7 @@ import Dashboard from './Components/DashBoard/Dashboard';
 import AllOrder from './Components/DashboardOutlet/AllOrder/AllOrder';
 import FeedBack from './Components/DashboardOutlet/FeedBack/FeedBack';
 import OrderDetailsAndUpdate from './Components/DashboardOutlet/OrderDetailsAndUpdate/OrderDetailsAndUpdate';
+import SingleClientOrder from './Components/DashboardOutlet/SingleClientOrder/SingleClientOrder';
 import LogIn from './Components/LogIn/LogIn';
 import HomePage from './Components/Pages/HomePage/HomePage';
 import PlaceOrderForm from './Components/Pages/PlaceOrderForm/PlaceOrderForm';
@@ -29,6 +30,7 @@ function App() {
           <Route path='/dashboard/all-order' element={<AllOrder />} />
           <Route path='/dashboard/feedback' element={<FeedBack />} />
           <Route path='/dashboard/order/details/:id' element={<OrderDetailsAndUpdate />} />
+          <Route path='/dashboard/Single/client/order/details/:email' element={<SingleClientOrder />} />
         </Route>
 
 

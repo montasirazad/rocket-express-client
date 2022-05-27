@@ -1,23 +1,22 @@
-import React, { useEffect, useState } from 'react';
-import { Badge } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
-import useAuth from '../../Hooks/Hook/useAuth';
-import './OrderDetailsAndUpdate.css'
+import FormControl from '@mui/material/FormControl';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormLabel from '@mui/material/FormLabel';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import FormControl from '@mui/material/FormControl';
-import FormLabel from '@mui/material/FormLabel';
-import { getHours, parseISO } from 'date-fns';
-import getTime from 'date-fns/getTime';
+import React, { useEffect, useState } from 'react';
+import { Badge } from 'react-bootstrap';
+import { useNavigate, useParams } from 'react-router-dom';
+import useAuth from '../../Hooks/Hook/useAuth';
+import './OrderDetailsAndUpdate.css';
 
 
 const OrderDetailsAndUpdate = () => {
 
     const [order, setOrder] = useState({});
 
-    const [status, setStatus] = useState('')
+
     const { id } = useParams();
+    const navigate = useNavigate()
     const { signedInUser } = useAuth();
 
 
@@ -30,7 +29,7 @@ const OrderDetailsAndUpdate = () => {
             })
     }, [id])
 
-    
+
 
     const handleChange = e => {
         const updatedInfo = {
@@ -61,6 +60,21 @@ const OrderDetailsAndUpdate = () => {
 
     const handleSubmit = e => {
         console.log(order);
+        fetch(`http://localhost:5000/update/${id}`, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(order)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.modifiedCount > 0) {
+                    alert('Info Updated SuccessFully');
+                    navigate('/dashboard/all-order')
+                }
+                console.log(data);
+            })
 
         e.preventDefault()
 
@@ -69,7 +83,7 @@ const OrderDetailsAndUpdate = () => {
     return (
         <div className='detail-container'>
             <div>
-                <h6 className='text-primary'>Customer personal Information</h6> <br />
+                <h4 className='text-primary'>Customer personal Information</h4> <br />
                 <p>Tracking id: {id}</p>
                 <p>Ordered on: {order.orderDate}</p>
                 <p>Customer Name: {order.customerName} </p>
@@ -77,7 +91,7 @@ const OrderDetailsAndUpdate = () => {
                 <p>Customer Phone: {order.customerPhone}</p>
                 <p>Parcel Type: {order.customerParcelType}</p>
 
-                <h6 className='text-primary'>Customer Address</h6>
+                <h4 className='text-primary'>Customer Address</h4>
                 <p>Customer City Corporation: {order.customerCityCorporation}</p>
                 <p>Thana: {order.customerThana}</p>
                 <p>Block: {order.customerAreaBlock}</p>
@@ -108,7 +122,8 @@ const OrderDetailsAndUpdate = () => {
                             <FormControlLabel onChange={handleChange} value="picked" control={<Radio />} label="picked" />
                             <FormControlLabel onChange={handleChange} value="pending" control={<Radio />} label="pending" />
                         </RadioGroup>
-                        <input type="submit" value="SUBMIT" />
+                        <button className='btn btn-primary' type='submit'>SUBMIT</button>
+
                     </FormControl>
 
                 </form>
@@ -117,7 +132,7 @@ const OrderDetailsAndUpdate = () => {
             </div>
             <br />
             <div>
-                <h6 className='text-primary'>Recipient Information</h6>
+                <h4 className='text-primary'>Recipient Information</h4>
                 <br />
                 <p>Recipient Name: {order.recipientsName}</p>
                 <p>Recipients Phone Number: {order.recipientsPhoneNumber}</p>

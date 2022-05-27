@@ -1,9 +1,12 @@
- 
+ .main-container{
+      
+ }
 .dashboard-div{
 display: grid;
 margin-top: 58px;
 grid-template-columns: .5fr 2fr;
 column-gap: 10px;
+height: 100vh;
  
 }
 
