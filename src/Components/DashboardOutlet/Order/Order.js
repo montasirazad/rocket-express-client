@@ -1,5 +1,6 @@
 import React from 'react';
 import { Badge } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './Order.css'
 
 const Order = (props) => {
@@ -11,7 +12,7 @@ const Order = (props) => {
             <p>Ordered : {orderDate}</p>
             <p>Pick up date: {pickUpDate}</p>
             <p>Delivery status : <Badge bg="danger">{deliveryStatus}</Badge></p>
-            <button className='btn btn-primary'>update</button>
+           <Link to={`/dashboard/order/details/${_id}`}> <button className='btn btn-primary'>update</button></Link>
         </div>
     );
 };

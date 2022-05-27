@@ -1,5 +1,6 @@
 .order-div{
     border: 1px solid blue ;
+    border-radius: 6px;
     padding: 10px;
     margin: 10px;
     width: 400px;

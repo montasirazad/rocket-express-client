@@ -11,7 +11,7 @@ import { Link, Outlet } from 'react-router-dom';
 
 const Dashboard = () => {
     return (
-        <>
+        <div className='main-container'>
             <MenuItem />
             <div className='dashboard-div'>
 
@@ -29,7 +29,7 @@ const Dashboard = () => {
                     <Outlet />
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 
