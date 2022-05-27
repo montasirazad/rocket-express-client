@@ -95,7 +95,7 @@ const PlaceOrderForm = () => {
                             <TextField onBlur={handleBlur} name='customerEmail' id="outlined-basic" value={signedInUser.email || ''} variant="outlined" /> <br />
                             <TextField onBlur={handleBlur} name='customerAge' id="filled-basic" label="Your Age" variant="outlined" /> <br />
                             <TextField onBlur={handleBlur} name='customerPhone' id="filled-basic" required label="Your Phone Number" variant="outlined" /> <br />
-                            <TextField onBlur={handleBlur} name='customerCityCorporation' id="standard-basic" required label="Your City corporation" variant="outlined" /><br />
+                            <TextField onBlur={handleBlur} name='customerCityCorporation' id="standard-basic" required label="Your City corporation ex:North / South" variant="outlined" /><br />
                             <TextField onBlur={handleBlur} name='customerThana' id="standard-basic" required label="Your Thana Name" variant="outlined" /> <br />
                             <TextField onBlur={handleBlur} name='customerHouseNo' id="standard-basic" required label="Your House No." variant="outlined" /><br />
                             <TextField onBlur={handleBlur} name='customerAreaBlock' id="standard-basic" required label="Your Area Block" variant="outlined" /><br />
@@ -122,7 +122,7 @@ const PlaceOrderForm = () => {
                             <h3 className='text-success'>Please Enter recipients Information</h3> <br />
                             <TextField onBlur={handleBlur} id="outlined-basic" name='recipientsName' required label="Recipients Name" variant="outlined" /> <br />
                             <TextField onBlur={handleBlur} id="filled-basic" name='recipientsPhoneNumber' required label="Recipients Phone Number" variant="outlined" /> <br />
-                            <TextField onBlur={handleBlur} id="standard-basic" name='recipientsCityCorporation' required label="Recipients City corporation" variant="outlined" /><br />
+                            <TextField onBlur={handleBlur} id="standard-basic" name='recipientsCityCorporation' required label="Recipients City corporation ex:North / South" variant="outlined" /><br />
                             <TextField onBlur={handleBlur} id="standard-basic" name='recipientsThanaName' required label="Recipients Thana Name" variant="outlined" /> <br />
                             <TextField onBlur={handleBlur} id="standard-basic" name='recipientsHouseNo' required label="Recipients House No." variant="outlined" /><br />
                             <TextField onBlur={handleBlur} id="standard-basic" name='recipientsAreaBlock' required label="Recipients Area Block" variant="outlined" /><br />
