@@ -31,8 +31,9 @@ const PlaceOrderForm = () => {
         recipientsHouseNo: '',
         recipientsAreaBlock: '',
         deliveryStatus: 'pending',
-        date: '',
-        pickUpTime: ''
+        pickUpDate: '',
+        pickUpTime: '',
+        orderDate: new Date()
 
     }
 
@@ -103,7 +104,7 @@ const PlaceOrderForm = () => {
 
                             <div className='calender-div'>
                                 <h4>Enter Pick up Date</h4>
-                                <input type="date" name="date" onChange={handleBlur} /> <br />
+                                <input type="date" name="pickUpDate" onChange={handleBlur} /> <br />
                                 <h4>Enter Pick up Time</h4>
                                 <input type="time" name="pickUpTime" onChange={handleBlur} />
 

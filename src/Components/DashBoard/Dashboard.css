@@ -3,12 +3,13 @@ display: grid;
 margin-top: 58px;
 grid-template-columns: .5fr 2fr;
 column-gap: 10px;
+ 
 }
 
 .dashboard-drawer{
 /* border: 2px solid green; */
 background-color: #198754;
-height: 100vh;
+height: auto;
 padding: 10px;
 color: white;
 text-align:left;

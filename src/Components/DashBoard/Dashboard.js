@@ -17,11 +17,12 @@ const Dashboard = () => {
 
                 <div className='dashboard-drawer'>
 
-                   <Link to='/dashboard/all-order'> <p><DashboardIcon /> All Order</p></Link>
+                   <p>YOur order</p>
 
                     <Link to='/dashboard/feedback'><p><RateReviewIcon /> Give feedback</p></Link>
-                    <p><AdminPanelSettingsIcon /> Admin</p>
+                     
                     <p><SupervisorAccountIcon /> Make Admin</p>
+                    <Link to='/dashboard/all-order'> <p><DashboardIcon /> All Order</p></Link>
                 </div>
 
                 <div className='dashboard-data'>
