@@ -4,16 +4,18 @@ import { Button } from '@mui/material';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import React, { useState } from 'react';
+import useAuth from '../../Hooks/Hook/useAuth';
 import MenuItem from '../../Shared/MenuItem/MenuItem';
 import './PlaceOrderForm.css';
 
 
 const PlaceOrderForm = () => {
-    const [date, setDate] = useState(new Date());
+    const { signedInUser } = useAuth()
 
 
     const initialOrderInfo = {
-        customerName: '',
+        customerName: signedInUser.displayName,
+        customerEmail: signedInUser.email,
         customerAge: '',
         customerPhone: '',
         customerCityCorporation: '',
@@ -29,7 +31,7 @@ const PlaceOrderForm = () => {
         recipientsHouseNo: '',
         recipientsAreaBlock: '',
         deliveryStatus: 'pending',
-        date: date,
+        date: '',
         pickUpTime: ''
 
     }
@@ -56,8 +58,16 @@ const PlaceOrderForm = () => {
             },
             body: JSON.stringify(orderInfo)
         })
+            .then(res => res.json())
+            .then(data => {
+                if (data.insertedId) {
+                    alert('Parcel PIck up request Added successfully.');
+                    e.target.reset()
+                }
+                console.log(data);
+            })
 
-        console.log(orderInfo);
+        // console.log(orderInfo);
         e.preventDefault()
     }
 
@@ -80,7 +90,8 @@ const PlaceOrderForm = () => {
                             autoComplete="off"
                         >
                             <h3 className='text-success'> <InfoIcon /> Please Enter Some Information</h3>
-                            <TextField onBlur={handleBlur} name='customerName' id="outlined-basic" required label="Your Name" variant="outlined" /> <br />
+                            <TextField onBlur={handleBlur} name='customerName' id="outlined-basic" value={signedInUser.displayName || ''} variant="outlined" /> <br />
+                            <TextField onBlur={handleBlur} name='customerEmail' id="outlined-basic" value={signedInUser.email || ''} variant="outlined" /> <br />
                             <TextField onBlur={handleBlur} name='customerAge' id="filled-basic" label="Your Age" variant="outlined" /> <br />
                             <TextField onBlur={handleBlur} name='customerPhone' id="filled-basic" required label="Your Phone Number" variant="outlined" /> <br />
                             <TextField onBlur={handleBlur} name='customerCityCorporation' id="standard-basic" required label="Your City corporation" variant="outlined" /><br />
@@ -121,13 +132,21 @@ const PlaceOrderForm = () => {
                         <h5>< AnnouncementIcon className='text-danger' /> Read this carefully before submit :</h5>
                         <p className='text-danger'>
 
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Reprehenderit ab tenetur autem cumque velit consequuntur,
-                            harum, necessitatibus architecto corporis odit cupiditate
-                            expedita sunt facere quas doloremque? Maxime deserunt
-                            laborum reprehenderit expedita qui ratione illum,
-                            eius accusamus doloremque veniam vero, possimus ipsam
-                            harum! Ab ut itaque cumque temporibus quas libero saepe!
+                            If delivery of goods is not made in the
+                            quantities and/or at the time(s) specified
+                            in the Purchase Order, Buyer reserves the
+                            right, without liability to take either or
+                            both of the following actions: (a) direc
+                            t expedited routings of goods (the difference
+                            in cost between the expedited routing and the
+                            order routing costs shall be paid by Seller);
+                            (b) cancel this order or balance by notice
+                            effective when delivered to Seller; to
+                            purchase substitute goods elsewhere and
+                            charge Seller with any loss incurred,
+                            including the difference between the cost
+                            of substitute goods and the goods that would
+                            have been provided by Seller.
                         </p>
                     </div>
                     <div className='agreement-button'>
