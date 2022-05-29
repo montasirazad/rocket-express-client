@@ -1,4 +1,28 @@
-.detail-container{
+.detail-container {
     display: flex;
     justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.delivery-status {
+    margin-left: 110px;
+    margin-bottom: 20px;
+}
+
+.footer-div {
+    text-align: center;
+    margin: 25px;
+}
+
+@media only screen and (max-width: 870px) {
+    .detail-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+         
+    }
+
+    .delivery-status {
+        margin-left: 20px;
+    }
 }

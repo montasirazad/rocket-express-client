@@ -12,6 +12,7 @@ import dhaka from '../../../image/dhaka.jpg';
 import MenuItem from '../../Shared/MenuItem/MenuItem';
 import './Services.css';
 import { Link } from 'react-router-dom';
+import Footer from '../../Shared/Footer/Footer';
 
 
 const Services = () => {
@@ -62,12 +63,12 @@ const Services = () => {
                             Pick and drop in 6 hours inside Dhaka City
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
-                           Delivery charge 100 BDT 
+                            Delivery charge 100 BDT
                         </Typography>
                     </CardContent>
                     <CardActions>
 
-                    <Link to='/place-order-form'><Button size="small">Confirm An Order</Button></Link>
+                        <Link to='/place-order-form'><Button size="small">Confirm An Order</Button></Link>
                     </CardActions>
                 </Card>
 
@@ -86,7 +87,7 @@ const Services = () => {
                             Pick and drop in 24 hours inside Dhaka City
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
-                           Delivery charge 60 BDT 
+                            Delivery charge 60 BDT
                         </Typography>
                     </CardContent>
                     <CardActions>
@@ -97,7 +98,7 @@ const Services = () => {
 
             </div>
 
-
+            <Footer />
 
         </div>
     );
