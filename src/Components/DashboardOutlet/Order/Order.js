@@ -9,7 +9,7 @@ const Order = (props) => {
         <div className='order-div'>
             <p>Tracking id : {_id}</p>
             <p>Customer Name: {customerName}</p>
-            <p>Ordered : {orderDate}</p>
+            <p>Ordered on: {orderDate}</p>
             <p>Pick up date: {pickUpDate}</p>
             <p>Delivery status : {
 

@@ -82,6 +82,32 @@ const OrderDetailsAndUpdate = () => {
 
     return (
         <div className='detail-container'>
+
+            <form onSubmit={handleSubmit} id='delivery-status'>
+
+                <FormControl>
+                    <FormLabel id="demo-radio-buttons-group-label">Delivery Status</FormLabel>
+
+
+                    <RadioGroup
+                        aria-labelledby="demo-radio-buttons-group-label"
+                        defaultValue="female"
+                        name="radio-buttons-group"
+                    >
+                        <FormControlLabel onChange={handleChange} value="delivered" control={<Radio />} label="delivered" />
+                        <FormControlLabel onChange={handleChange} value="picked" control={<Radio />} label="picked" />
+                        <FormControlLabel onChange={handleChange} value="pending" control={<Radio />} label="pending" />
+                    </RadioGroup>
+
+                    <button className='btn btn-primary' type='submit'>SUBMIT</button>
+
+                </FormControl>
+
+            </form>
+
+
+
+
             <div>
                 <h4 className='text-primary'>Customer personal Information</h4> <br />
                 <p>Tracking id: {id}</p>
@@ -91,8 +117,8 @@ const OrderDetailsAndUpdate = () => {
                 <p>Customer Phone: {order.customerPhone}</p>
                 <p>Parcel Type: {order.customerParcelType}</p>
 
-                <h4 className='text-primary'>Customer Address</h4>
-                <p>Customer City Corporation: {order.customerCityCorporation}</p>
+                <h4 className='text-primary'>Recipient Address</h4>
+                <p>City Corporation: {order.customerCityCorporation}</p>
                 <p>Thana: {order.customerThana}</p>
                 <p>Block: {order.customerAreaBlock}</p>
                 <p>House no: {order.customerHouseNo}</p>
@@ -107,27 +133,7 @@ const OrderDetailsAndUpdate = () => {
                 </p>
                 <p>Change Delivery Status</p>
                 <p>Parcel Pick up time:  {order.pickUpTime} </p>
-
-
-                <form onSubmit={handleSubmit} >
-
-                    <FormControl>
-                        <FormLabel id="demo-radio-buttons-group-label">Delivery Status</FormLabel>
-                        <RadioGroup
-                            aria-labelledby="demo-radio-buttons-group-label"
-                            defaultValue="female"
-                            name="radio-buttons-group"
-                        >
-                            <FormControlLabel onChange={handleChange} value="delivered" control={<Radio />} label="delivered" />
-                            <FormControlLabel onChange={handleChange} value="picked" control={<Radio />} label="picked" />
-                            <FormControlLabel onChange={handleChange} value="pending" control={<Radio />} label="pending" />
-                        </RadioGroup>
-                        <button className='btn btn-primary' type='submit'>SUBMIT</button>
-
-                    </FormControl>
-
-                </form>
-
+                <p>Parcel Pick up date:  {order.pickUpDate} </p>
 
             </div>
             <br />
