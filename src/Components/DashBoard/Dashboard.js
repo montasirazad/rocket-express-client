@@ -29,6 +29,7 @@ const Dashboard = () => {
                 </div>
 
                 <div className='dashboard-data'>
+                    <h5>Please select a option</h5>
                     <Outlet />
                 </div>
             </div>
