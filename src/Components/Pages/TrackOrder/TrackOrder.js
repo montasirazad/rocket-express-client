@@ -56,7 +56,7 @@ const TrackOrder = () => {
                     <p>Customer Phone: {orderFound.customerPhone}</p>
                     <p>Parcel Type: {orderFound.customerParcelType}</p>
                     <p>Parcel Pick up time:  {orderFound.pickUpTime} </p>
-                    <h4 className='text-primary'>Customer Address</h4>
+                    <h4 className='text-primary'>Recipient's Address</h4>
                     <p>Customer City Corporation: {orderFound.customerCityCorporation}</p>
                     <p>Thana: {orderFound.customerThana}</p>
                     <p>Block: {orderFound.customerAreaBlock}</p>

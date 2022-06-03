@@ -12,7 +12,7 @@ const Footer = () => {
 
             <footer className="text-center text-lg-start bg-light text-muted">
 
-                <section className="">
+                <section >
                     <div className="container text-center text-md-start mt-5">
 
                         <div className="row mt-3">
