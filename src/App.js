@@ -11,6 +11,7 @@ import HomePage from './Components/Pages/HomePage/HomePage';
 import PlaceOrderForm from './Components/Pages/PlaceOrderForm/PlaceOrderForm';
 import Services from './Components/Pages/Services/Services';
 import TrackOrder from './Components/Pages/TrackOrder/TrackOrder';
+import PrivateRoute from './Components/Shared/PrivateRoute/PrivateRoute';
 
 function App() {
 
@@ -23,9 +24,18 @@ function App() {
         <Route path='/services' element={<Services />} />
         <Route path='/home' element={<HomePage />} />
         <Route path='/login' element={<LogIn />} />
-        <Route path='/place-order-form' element={<PlaceOrderForm />} />
+
+        <Route path='/place-order-form' element={<PrivateRoute>
+          <PlaceOrderForm />
+        </PrivateRoute>} />
+
         <Route path='/track-order' element={<TrackOrder />} />
-        <Route path='/dashboard' element={<Dashboard />}>
+
+
+        {/* Nested Route */}
+        <Route path='/dashboard' element={<PrivateRoute>
+          <Dashboard />
+        </PrivateRoute>}>
 
           <Route path='/dashboard/all-order' element={<AllOrder />} />
           <Route path='/dashboard/feedback' element={<FeedBack />} />
@@ -33,10 +43,9 @@ function App() {
           <Route path='/dashboard/Single/client/order/details/:email' element={<SingleClientOrder />} />
         </Route>
 
+      </Routes >
 
-      </Routes>
-
-    </AuthProvider>
+    </AuthProvider >
   );
 }
 
