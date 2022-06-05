@@ -4,6 +4,7 @@ import AuthProvider from './Components/Context/AuthProvider';
 import Dashboard from './Components/DashBoard/Dashboard';
 import AllOrder from './Components/DashboardOutlet/AllOrder/AllOrder';
 import FeedBack from './Components/DashboardOutlet/FeedBack/FeedBack';
+import MakeAdmin from './Components/DashboardOutlet/MakeAdmin/MakeAdmin';
 import OrderDetailsAndUpdate from './Components/DashboardOutlet/OrderDetailsAndUpdate/OrderDetailsAndUpdate';
 import SingleClientOrder from './Components/DashboardOutlet/SingleClientOrder/SingleClientOrder';
 import LogIn from './Components/LogIn/LogIn';
@@ -38,6 +39,7 @@ function App() {
         </PrivateRoute>}>
 
           <Route path='/dashboard/all-order' element={<AllOrder />} />
+          <Route path='/dashboard/make-admin' element={<MakeAdmin />} />
           <Route path='/dashboard/feedback' element={<FeedBack />} />
           <Route path='/dashboard/order/details/:id' element={<OrderDetailsAndUpdate />} />
           <Route path='/dashboard/Single/client/order/details/:email' element={<SingleClientOrder />} />

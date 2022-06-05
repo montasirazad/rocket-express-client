@@ -26,13 +26,14 @@ const useFirebase = () => {
                 const user = result.user;
                 console.log(user);
                 setSignedInUser(user);
+                saveUser(user.email, user.displayName);
                 const destination = location.state.from || '/';
                 navigate(destination);
 
             }).catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                const email = error.customData.email;
+                const email = error.email;
                 const credential = GoogleAuthProvider.credentialFromError(error);
                 setError(errorMessage)
             });
@@ -62,6 +63,18 @@ const useFirebase = () => {
         return () => unSubscribe;
     }, [])
 
+    // SAVE USER INFO TO DB
+    const saveUser = (email, displayName) => {
+        const user = { email, displayName }
+        fetch('http://localhost:5000/users', {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+            .then()
+    }
 
     return {
         signedInUser,

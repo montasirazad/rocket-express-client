@@ -24,7 +24,8 @@ const Dashboard = () => {
 
                     <Link to='/dashboard/feedback'><p><RateReviewIcon /> Give feedback</p></Link>
 
-                    <p><SupervisorAccountIcon /> Make Admin</p>
+                    <Link to='/dashboard/make-admin'><p><SupervisorAccountIcon /> Make Admin</p></Link>
+
                     <Link to='/dashboard/all-order'> <p><DashboardIcon /> All Order</p></Link>
                 </div>
 
