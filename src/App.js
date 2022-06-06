@@ -12,6 +12,7 @@ import HomePage from './Components/Pages/HomePage/HomePage';
 import PlaceOrderForm from './Components/Pages/PlaceOrderForm/PlaceOrderForm';
 import Services from './Components/Pages/Services/Services';
 import TrackOrder from './Components/Pages/TrackOrder/TrackOrder';
+import AdminRoute from './Components/Shared/AdminRote/AdminRoute';
 import PrivateRoute from './Components/Shared/PrivateRoute/PrivateRoute';
 
 function App() {
@@ -38,10 +39,17 @@ function App() {
           <Dashboard />
         </PrivateRoute>}>
 
-          <Route path='/dashboard/all-order' element={<AllOrder />} />
-          <Route path='/dashboard/make-admin' element={<MakeAdmin />} />
+          <Route path='/dashboard/all-order' element={<AdminRoute>
+            <AllOrder />
+          </AdminRoute>} />
+
+          <Route path='/dashboard/make-admin' element={<AdminRoute>
+            <MakeAdmin />
+          </AdminRoute>} />
           <Route path='/dashboard/feedback' element={<FeedBack />} />
-          <Route path='/dashboard/order/details/:id' element={<OrderDetailsAndUpdate />} />
+          <Route path='/dashboard/order/details/:id' element={<AdminRoute>
+            <OrderDetailsAndUpdate />
+          </AdminRoute>} />
           <Route path='/dashboard/Single/client/order/details/:email' element={<SingleClientOrder />} />
         </Route>
 

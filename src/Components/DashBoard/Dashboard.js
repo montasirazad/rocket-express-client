@@ -11,7 +11,7 @@ import './Dashboard.css';
 
 
 const Dashboard = () => {
-    const { signedInUser } = useAuth();
+    const { signedInUser, admin } = useAuth();
 
     return (
         <div className='main-container'>
@@ -24,9 +24,13 @@ const Dashboard = () => {
 
                     <Link to='/dashboard/feedback'><p><RateReviewIcon /> Give feedback</p></Link>
 
-                    <Link to='/dashboard/make-admin'><p><SupervisorAccountIcon /> Make Admin</p></Link>
 
-                    <Link to='/dashboard/all-order'> <p><DashboardIcon /> All Order</p></Link>
+                    {admin && <>
+                        <Link to='/dashboard/make-admin'><p><SupervisorAccountIcon /> Make Admin</p></Link>
+
+                        <Link to='/dashboard/all-order'> <p><DashboardIcon /> All Order</p></Link>
+                    </>}
+
                 </div>
 
                 <div className='dashboard-data'>

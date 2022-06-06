@@ -23,7 +23,8 @@ const Support = () => {
                     borderRadius: '5px',
                     backgroundColor: "black",
                     color: 'white',
-                    padding: '10px'
+                    padding: '10px',
+                    marginBottom:'10px'
                 }}
                     sx={{ md: 8, xs: 12 }} textAlign='left' >
 
@@ -38,11 +39,10 @@ const Support = () => {
                     </Typography>
                     <Typography variant="subtitle1" gutterBottom component="div">
                         Ending your emails without a closing message can be risky as it is not inviting the customer to share further issues
-                    </Typography>
-
-                    <Typography variant="subtitle1" gutterBottom component="div" >
                         issues you sincerely want to hear about.
                     </Typography>
+
+                    
 
 
                 </Grid>

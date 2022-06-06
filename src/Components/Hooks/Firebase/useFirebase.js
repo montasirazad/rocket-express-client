@@ -10,6 +10,7 @@ const useFirebase = () => {
 
     const [signedInUser, setSignedInUser] = useState({});
     const [error, setError] = useState('');
+    const [admin, setAdmin] = useState(false);
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -63,6 +64,15 @@ const useFirebase = () => {
         return () => unSubscribe;
     }, [])
 
+    useEffect(() => {
+        fetch(`http://localhost:5000/users/${signedInUser.email}`)
+            .then(res => res.json())
+            .then(data => {
+                setAdmin(data.admin);
+                console.log(data);
+            })
+    }, [signedInUser.email])
+
     // SAVE USER INFO TO DB
     const saveUser = (email, displayName) => {
         const user = { email, displayName }
@@ -78,6 +88,7 @@ const useFirebase = () => {
 
     return {
         signedInUser,
+        admin,
         error,
         handleGoogleSignIn,
         handleGoogleSignOut
