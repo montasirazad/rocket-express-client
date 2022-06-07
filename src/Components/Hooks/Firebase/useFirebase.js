@@ -1,8 +1,8 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } from "firebase/auth";
+import { getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut } from "firebase/auth";
 import { useEffect, useState } from "react";
-import { Navigate, useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import initializeAuthentication from "./initializeAuthentication";
 
-import initializeAuthentication from "./initializeAuthentication"
 
 
 
@@ -44,7 +44,7 @@ const useFirebase = () => {
         const auth = getAuth();
         signOut(auth).then(() => {
             setSignedInUser({})
-            console.log(signedInUser);
+            
         }).catch((error) => {
             // An error happened.
         });

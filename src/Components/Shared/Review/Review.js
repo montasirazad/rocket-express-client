@@ -12,7 +12,7 @@ const Review = () => {
             .then(res => res.json())
             .then(data => {
                 setAllReview(data)
-                console.log(data)
+                
             })
     }, [])
 

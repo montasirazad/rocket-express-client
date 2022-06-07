@@ -31,7 +31,7 @@ const Footer = () => {
                                 <p ><Link to='/services'>SERVICES</Link></p>
                                 <p><Link to='/track-order'>TRACK PARCEL</Link></p>
                                 <p><Link to='/dashboard'>ORDERS</Link></p>
-                                <p><Link to='/track-order'>ABOUT</Link></p>
+                                <p><Link to='/'>ABOUT</Link></p>
                             </div>
 
                             <div className="col-md-4 col-lg-3 col-xl-3 my-2 mx-auto mb-md-0 mb-4">
