@@ -1,15 +1,16 @@
-# Website name 
-rocket express courier service
+Website name 
+
+# rocket express courier service
 
 # Live site Link 
 https://rocket-express-courier.firebaseapp.com/
 
 # Used Technologies
 
-CSS: React Bootstap , Material UI
-Front-end Hosting : Firebase  
-Back-end Hosting : Heroku
-Server Used : MongoDB
+CSS: React Bootstap , Material UI /
+Front-end Hosting : Firebase  /
+Back-end Hosting : Heroku /
+Server Used : MongoDB /
 Authentication : Firebase
 
 
