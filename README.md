@@ -1,3 +1,20 @@
+# Website name 
+rocket express courier service
+
+# Live site Link 
+https://rocket-express-courier.firebaseapp.com/
+
+# Used Technologies
+
+CSS: React Bootstap , Material UI
+Front-end Hosting : Firebase  
+Back-end Hosting : Heroku
+Server Used : MongoDB
+Authentication : Firebase
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
