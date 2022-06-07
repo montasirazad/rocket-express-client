@@ -52,7 +52,7 @@ const PlaceOrderForm = () => {
 
     const handleSubmitClientInfo = (e) => {
 
-        fetch('http://localhost:5000/', {
+        fetch('https://peaceful-oasis-21276.herokuapp.com/', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -16,7 +16,7 @@ const TrackOrder = () => {
     }
 
     const handleSubmit = (e) => {
-        fetch(`http://localhost:5000/order/${orderId}`)
+        fetch(`https://peaceful-oasis-21276.herokuapp.com/order/${orderId}`)
             .then(res => res.json())
             .then(data => {
                 setOrderFound(data);

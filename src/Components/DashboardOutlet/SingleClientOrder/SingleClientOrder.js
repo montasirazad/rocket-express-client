@@ -11,7 +11,7 @@ const SingleClientOrder = () => {
 
     useEffect(() => {
 
-        fetch(`http://localhost:5000/single-order?email=${email}`)
+        fetch(`https://peaceful-oasis-21276.herokuapp.com/single-order?email=${email}`)
             .then(res => res.json())
             .then(data => {
                 setAllOrder(data)

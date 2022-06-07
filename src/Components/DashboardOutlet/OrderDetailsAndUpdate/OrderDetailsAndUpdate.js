@@ -21,7 +21,7 @@ const OrderDetailsAndUpdate = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/order/${id}`)
+        fetch(`https://peaceful-oasis-21276.herokuapp.com/order/${id}`)
             .then(res => res.json())
             .then(data => {
                 setOrder(data);
@@ -60,7 +60,7 @@ const OrderDetailsAndUpdate = () => {
 
     const handleSubmit = e => {
         console.log(order);
-        fetch(`http://localhost:5000/update/${id}`, {
+        fetch(`https://peaceful-oasis-21276.herokuapp.com/update/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
